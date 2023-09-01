@@ -43,7 +43,7 @@ export class AuthService {
     } catch (error) {
       console.log(error.code)
       if(error.code === 11000){
-        throw new BadRequestException(`${ createUserDto.email } ya existe`)
+        throw new BadRequestException('El correo ya esta registrado')
       }
       throw new InternalServerErrorException('Error inesperado!');
     }

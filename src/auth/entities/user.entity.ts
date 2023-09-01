@@ -11,8 +11,10 @@ export class User {
     password?: string;
     @Prop({ default: true})
     isActive: boolean;
-    @Prop({ type: [String], default: ['user']})
+    @Prop({ type: [String], default: ['USER_ROLE']})
     roles: string[];
+    @Prop({ default: 'user_img.jpg'})
+    img: string;
 
 }
 
